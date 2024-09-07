@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوآوران سیب سبز | راهکارهای نوین توسعه وب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .hero a {
+            background-color: white;
+            color: #4CAF50;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .hero a:hover {
+            background-color: #ddd;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .service {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .service i {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .service h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .service p {
+            font-size: 16px;
+            color: #666;
+        }
+        .about {
+            text-align: center;
+        }
+        .about img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .portfolio-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .portfolio-item p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .portfolio-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .portfolio-item a:hover {
+            background-color: #45a049;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #666;
+        }
+        .testimonial h4 {
+            margin: 10px 0 0;
+            color: #4CAF50;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 15px 0;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>نوآوران سیب سبز</h1>
+        <p>راهکارهای نوین توسعه وب برای کسب‌وکارهای مدرن</p>
+    </header>
+
+    <nav>
+        <a href="#services">خدمات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#portfolio">نمونه کارها</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <section class="hero">
+        <h1 style="color: #333;">خدمات نوین توسعه وب</h1>
+        <p style="color: #333;">با تیم متخصص ما، کسب‌وکار خود را به دنیای دیجیتال وارد کنید و از راهکارهای منحصر به فرد ما بهره‌مند شوید.</p>
+        <a href="#contact">شروع کنید</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service">
+            <i class="fas fa-laptop-code"></i>
+            <h3>طراحی وبسایت</h3>
+            <p>طراحی وبسایت‌های مدرن و واکنش‌گرا با توجه به نیازهای مشتریان.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>توسعه اپلیکیشن موبایل</h3>
+            <p>توسعه اپلیکیشن‌های موبایل برای سیستم‌عامل‌های iOS و Android.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-cloud"></i>
+            <h3>راهکارهای ابری</h3>
+            <p>ارائه راهکارهای ابری برای مدیریت و ذخیره‌سازی امن داده‌ها.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-search"></i>
+            <h3>بهینه‌سازی موتور جستجو (SEO)</h3>
+            <p>افزایش رتبه سایت شما در موتورهای جستجو و جذب بازدیدکنندگان بیشتر.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-shield-alt"></i>
+            <h3>امنیت سایبری</h3>
+            <p>حفاظت از وبسایت و داده‌های شما در برابر تهدیدات سایبری.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-headset"></i>
+            <h3>پشتیبانی و نگهداری</h3>
+            <p>پشتیبانی 24/7 برای حفظ عملکرد بی‌نقص وبسایت شما.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>درباره ما</h2>
+        <p>نوآوران سیب سبز با هدف ارائه خدمات توسعه وب و اپلیکیشن‌های موبایل به صورت حرفه‌ای و مطابق با استانداردهای روز دنیا تأسیس شد. ما با تیمی از متخصصان مجرب و متعهد، به دنبال ارائه بهترین راهکارهای دیجیتال به مشتریان خود هستیم.</p>
+        <img src="team.jpg" alt="Team photo">
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>نمونه کارها</h2>
+        <div class="portfolio-item">
+            <img src="1.png" alt="Ziyarat Arbaein App">
+            <h4>زیارت اربعین</h4>
+            <p>اپلیکیشن مذهبی برای مدیریت سفر زیارتی و اطلاعات مرتبط با اربعین.</p>
+            <a href="https://cafebazaar.ir/app/ir.winsoft.ziyarate_arbaein" target="_blank">مشاهده پروژه</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="2.png" alt="Nasle Ahan Gym Equipment Store">
+            <h4>نسل آهن</h4>
+            <p>فروشگاه آنلاین تجهیزات ورزشی و باشگاهی با امکانات پیشرفته.</p>
+            <a href="https://nasleahan.com/" target="_blank">مشاهده پروژه</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="3.png" alt="Digi Machine Magazine">
+            <h4>دیجی ماشین</h4>
+            <p>مجله آنلاین ماشین‌آلات و تکنولوژی‌های جدید صنعت خودرو.</p>
+            <a href="https://digimachinemag.com/" target="_blank">مشاهده پروژه</a>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>نظرات مشتریان</h2>
+        <div class="testimonial">
+            <img src="pfp.webp" alt="Client 1">
+            <p>خدمات نوآوران سیب سبز بسیار حرفه‌ای و به موقع بود. تیم آن‌ها با دقت به تمامی نیازهای ما پاسخ دادند.</p>
+            <h4>گروه وین سافت</h4>
+        </div>
+        <div class="testimonial">
+            <img src="pfp.webp" alt="Client 2">
+            <p>با استفاده از راهکارهای نوین این تیم، وبسایت ما توانست رتبه بهتری در موتورهای جستجو کسب کند.</p>
+            <h4>استودیو مدریک</h4>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <h2>تماس با ما</h2>
+        <form>
+            <label for="name">نام:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">پیام:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="ارسال">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 نوآوران سیب سبز. تمامی حقوق محفوظ است.</p>
+        <p><a href="#">شرایط استفاده</a> | <a href="#">حریم خصوصی</a></p>
+    </footer>
+
+</body>
+</html>
